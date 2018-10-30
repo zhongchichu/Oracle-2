@@ -44,7 +44,9 @@ SQL> CREATE VIEW myview AS SELECT name FROM mytable;
 View created.
 SQL> SELECT * FROM myview;
 NAME
+```
 ***
+```sql
 zhang
 wang
 SQL> GRANT SELECT ON myview TO hr;
