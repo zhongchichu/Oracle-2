@@ -58,7 +58,9 @@ SQL>exit
 $ sqlplus hr/123@pdborcl
 SQL> SELECT * FROM new_user.myview;
 NAME
+```
 ***
+```sql
 zhang
 wang
 SQL> exit
