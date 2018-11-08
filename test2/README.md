@@ -31,9 +31,9 @@ SQL> exit
 
 - 第2步：新用户ypan_user连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 ```sql
-$ sqlplus new_user/123@pdborcl
+$ sqlplus ypan_user/123@pdborcl
 SQL> show user;
-USER is "NEW_USER"
+USER is "YPAN_USER"
 SQL> CREATE TABLE mytable (id number,name varchar(50));
 Table created.
 SQL> INSERT INTO mytable(id,name)VALUES(1,'zhang');
