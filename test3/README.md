@@ -147,7 +147,7 @@ NOCOMPRESS NO INMEMORY
  - **表创建成功，如下图所示：**<br><br>
  ![表创建成功](https://github.com/YPanEI/Oracle/blob/master/test3/images/1.png)
  
- ##### 查看数据库使用情况
+ ##### - 查看数据库使用情况
  $ sqlplus system/123@pdborcl
  ```sql
  SQL>SELECT tablespace_name,FILE_NAME,BYTES/1024/1024 MB,MAXBYTES/1024/1024 MAX_MB,autoextensible FROM dba_data_files  WHERE  tablespace_name='USERS';
