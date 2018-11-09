@@ -145,4 +145,4 @@ NOCOMPRESS NO INMEMORY
 );
 ```
  - 表创建成功，如下图所示：
- ![表创建成功](https://github.com/YPanEI/Oracle/blob/master/test1%20/img/1_1.png)
+ ![表创建成功](https://github.com/YPanEI/Oracle/blob/master/test3/images/1.png)
