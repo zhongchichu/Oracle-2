@@ -144,10 +144,10 @@ PCTFREE 10
 NOCOMPRESS NO INMEMORY
 );
 ```
- - *****表创建成功，如下图所示：*****<br><br>
+ - **表创建成功，如下图所示：**<br><br>
  ![表创建成功](https://github.com/YPanEI/Oracle/blob/master/test3/images/1.png)
  
- ##### - 查看数据库使用情况
+ ##### 查看数据库使用情况
  $ sqlplus system/123@pdborcl
  ```sql
  SQL>SELECT tablespace_name,FILE_NAME,BYTES/1024/1024 MB,MAXBYTES/1024/1024 MAX_MB,autoextensible FROM dba_data_files  WHERE  tablespace_name='USERS';
@@ -161,3 +161,21 @@ SQL>SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
         group  BY tablespace_name)b
  where  a.tablespace_name = b.tablespace_name;
  ```
+##### 步骤三：插入一万条数据
+```sql
+create table MIS_SEC_USER(USERID number, USERNAME varchar(32), PWD varchar(32))
+declare
+v_uid number;
+v_usr varchar(32);
+v_pwd varchar(32);
+v_fg1 number;
+v_fg2 number;
+begin
+v_fg1 := 0;
+loop
+v_uid := abs(dbms_random.random());
+v_usr := dbms_random.string(opt => 'u', len => 10);
+v_pwd := dbms_random.string(opt => 'u', len => 10);
+select count(1) into v_fg2 from MIS_SEC_USER where USERID = v_uid or USERNAME = v_usr;
+if v_fg2 = 0 then
+```
