@@ -178,4 +178,11 @@ v_usr := dbms_random.string(opt => 'u', len => 10);
 v_pwd := dbms_random.string(opt => 'u', len => 10);
 select count(1) into v_fg2 from MIS_SEC_USER where USERID = v_uid or USERNAME = v_usr;
 if v_fg2 = 0 then
+insert into MIS_SEC_USER values(v_uid, v_usr, v_pwd);
+v_fg1 := v_fg1 + 1;
+end if;
+exit when v_fg1 >= 10000;
+end loop;
+commit;
+end;
 ```
