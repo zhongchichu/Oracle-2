@@ -144,7 +144,7 @@ PCTFREE 10
 NOCOMPRESS NO INMEMORY
 );
 ```
- - ****表创建成功，如下图所示：****<br><br>
+ - ******表创建成功，如下图所示：******<br><br>
  ![表创建成功](https://github.com/YPanEI/Oracle/blob/master/test3/images/1.png)
  
  ##### - 查看数据库使用情况
